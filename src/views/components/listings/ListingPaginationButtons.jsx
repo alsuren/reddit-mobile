@@ -41,8 +41,8 @@ export default class ListingPaginationButtons extends BaseComponent {
     if (page > 0) {
       const prevQuery = {
         ...ctx.query,
-        count: 25,
         page: page - 1,
+        count: 25,
         before: firstId,
         after: undefined,
       };
@@ -59,8 +59,8 @@ export default class ListingPaginationButtons extends BaseComponent {
 
     const nextQuery = {
       ...props.ctx.query,
-      count: 25,
       page: page + 1,
+      count: 25,
       after: lastId,
       before: undefined,
     };
