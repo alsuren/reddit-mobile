@@ -19,7 +19,6 @@ export const buildPrevUrl = (records, pagingPrefix='', currentQueryParams={}) =>
 
   if (page > 0) {
     const query = {
-      count: 25, // use the current params count if its defined
       ...currentQueryParams,
       page: page - 1,
       before: firstId,
@@ -35,7 +34,6 @@ export const buildNextUrl = (records, pagingPrefix='', currentQueryParams={}) =>
   const page = pageNumber(currentQueryParams);
 
   const query = {
-    count: 25,
     ...currentQueryParams,
     page: page + 1,
     after: lastId,
